@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>AI Page Summarizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>AI Page Summarizer</h1>
+    <button id="settings-toggle" class="ghost" title="设置">⚙ 设置</button>
+  </header>
+
+  <div class="start-area">
+    <div class="modes" role="tablist" aria-label="总结模式">
+      <button class="mode active" data-mode="brief">快速摘要</button>
+      <button class="mode" data-mode="insight">深度洞察</button>
+      <button class="mode" data-mode="research">研究笔记</button>
+      <button class="mode" data-mode="risk">可信度审查</button>
+      <button class="mode" data-mode="business">商业情报</button>
+      <button class="mode" data-mode="decision">决策辅助</button>
+    </div>
+    <button id="summarize" class="primary">开始总结当前页面</button>
+  </div>
+
+  <div id="status" class="status"></div>
+  <div id="summary" class="summary"></div>
+  <div class="toolbar">
+    <button id="copy" disabled>复制</button>
+    <button id="download" disabled>下载 MD</button>
+    <button id="pdf" disabled>导出 PDF</button>
+    <button id="history" disabled>历史</button>
+  </div>
+
+  <script src="markdown.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

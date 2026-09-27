@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>AI Page Summarizer 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>AI Page Summarizer 设置</h1>
+    <p class="tip">配置会自动保存到本机浏览器。API Key 只保存在本机，不会写进代码。</p>
+
+    <label>
+      <span>API 地址</span>
+      <input id="endpoint" type="url" spellcheck="false" autocomplete="off">
+    </label>
+
+    <label>
+      <span>模型</span>
+      <input id="model" type="text" spellcheck="false" autocomplete="off">
+    </label>
+
+    <label>
+      <span>API Key</span>
+      <div class="key-row">
+        <input id="api-key" type="password" spellcheck="false" autocomplete="off" placeholder="粘贴 Key">
+        <button id="show-key" type="button">显示</button>
+        <button id="paste-key" type="button">粘贴</button>
+      </div>
+    </label>
+
+    <div class="actions">
+      <button id="save" type="button">保存配置</button>
+      <button id="test" type="button" class="secondary">测试连接</button>
+    </div>
+
+    <div id="status" class="status">配置已加载。</div>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
