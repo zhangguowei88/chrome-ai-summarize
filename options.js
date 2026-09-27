@@ -1,6 +1,6 @@
 const DEFAULTS = {
-  endpoint: "https://ap-gateway.intra.weibo.com/openai/v1/chat/completions",
-  model: "gpt-4o-mini",
+  endpoint: "",
+  model: "",
   apiKey: ""
 };
 
@@ -13,7 +13,7 @@ function setStatus(text) {
 
 function normalizeEndpoint(value) {
   const endpoint = value.trim().replace(/\/+$/, "");
-  if (!endpoint) return DEFAULTS.endpoint;
+  if (!endpoint) return "";
   if (endpoint.endsWith("/v1/chat/completions")) return endpoint;
   if (endpoint.endsWith("/v1")) return `${endpoint}/chat/completions`;
   return `${endpoint}/v1/chat/completions`;

@@ -21,9 +21,9 @@
 
 点击插件弹窗右上角的齿轮，填写：
 
-- **API 地址**：OpenAI 兼容的 `chat/completions` 接口
-- **模型**：例如 `gpt-4o-mini`
-- **API Key**：本地服务可不填
+- **API 地址**：OpenAI 兼容服务地址，例如 `https://api.openai.com/v1`
+- **模型**：按你的服务商填写，例如 `gpt-4o-mini`
+- **API Key**：本地服务可不填，云端服务必填
 
 本地 Ollama 示例：
 
@@ -31,7 +31,7 @@
 OLLAMA_ORIGINS=chrome-extension://* ollama serve
 ```
 
-默认地址为 `https://ap-gateway.intra.weibo.com/openai/v1/chat/completions`。
+默认不预置任何 API 地址。设置页会自动把基础地址补全为 `/v1/chat/completions`。
 
 ## 隐私
 

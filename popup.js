@@ -1,6 +1,6 @@
 const DEFAULTS = {
-  endpoint: "https://ap-gateway.intra.weibo.com/openai/v1/chat/completions",
-  model: "gpt-4o-mini",
+  endpoint: "",
+  model: "",
   apiKey: ""
 };
 
